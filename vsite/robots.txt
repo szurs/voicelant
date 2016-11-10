@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /css/
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /examples/
+Disallow: /download/
