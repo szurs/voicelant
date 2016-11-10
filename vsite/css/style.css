@@ -1,0 +1,104 @@
+BODY {
+	BACKGROUND-COLOR: #eeeeee; FONT-SIZE: 70%; COLOR: black; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: justify
+}
+FIELDSET {
+	BORDER-RIGHT: black 2px solid; BORDER-TOP: black 2px solid; FONT-SIZE: 9pt; BACKGROUND: white; BORDER-LEFT: black 2px solid; WIDTH: 80%; BORDER-BOTTOM: black 2px solid; FONT-FAMILY: verdana
+}
+LEGEND {
+	BACKGROUND: black; COLOR: #ffffff
+}
+P {
+	FONT-SIZE: 70%; COLOR: black; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: justify
+}
+UL {
+	FONT-SIZE: 70%; COLOR: black; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: justify
+}
+OL {
+	FONT-SIZE: 70%; COLOR: black; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: justify
+}
+DT {
+	FONT-SIZE: 80%; COLOR: #454545; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: justify;
+}
+DD {
+	FONT-SIZE: 70%; COLOR: black; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: justify
+}
+H1 {
+	FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+H2 {
+	FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+H3 {
+	FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+H4 {
+	FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+H5 {
+	FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+H6 {
+	FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 175%; COLOR: #454545
+}
+H2 {
+	BORDER-RIGHT: #cccccc 0px solid; BORDER-TOP: #cccccc 0px solid; FONT-WEIGHT: normal; FONT-SIZE: 130%; PADDING-BOTTOM: 0px; BORDER-LEFT: #cccccc 0px solid; COLOR: #707070; BORDER-BOTTOM: #cccccc 1px solid
+}
+H3 {
+	BORDER-RIGHT: #cccccc 0px solid; BORDER-TOP: #cccccc 0px solid; FONT-WEIGHT: bold; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; BORDER-LEFT: #cccccc 0px solid; COLOR: #707070; BORDER-BOTTOM: #cccccc 1px solid; TEXT-ALIGN: center
+}
+
+.right {
+	TEXT-ALIGN: right
+}
+.left {
+	TEXT-ALIGN: left
+}
+.center {
+	TEXT-ALIGN: center
+}
+.norm {
+	FONT-WEIGHT: normal; FONT-SIZE: 70%; COLOR: #000000; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", Syntax, sans-serif; TEXT-DECORATION: none
+}
+.normnorm {
+	FONT-WEIGHT: normal; FONT-SIZE: 100%; COLOR: #000000; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", Syntax, sans-serif; TEXT-DECORATION: none
+}
+.nav {
+	FONT-WEIGHT: bold; FONT-SIZE: 80%; COLOR: #004080; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", Syntax, sans-serif; TEXT-DECORATION: none
+}
+.anav {
+	FONT-WEIGHT: bold; FONT-SIZE: 80%; COLOR: #004080; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", Syntax, sans-serif; TEXT-DECORATION: none
+}
+.navnorm {
+	FONT-WEIGHT: bold; FONT-SIZE: 100%; COLOR: #004080; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", Syntax, sans-serif; TEXT-DECORATION: none
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 80%; COLOR: #004080; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", Syntax, sans-serif; TEXT-DECORATION: none
+}
+.small {
+	FONT-SIZE: 60%; COLOR: #000000; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, Syntax, sans-serif
+}
+.footer {
+	FONT-SIZE: 60%; COLOR: #555555; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: center
+}
+.err {
+	FONT-SIZE: 150%; COLOR: red; FONT-FAMILY: Verdana, "Lucida Sans", Arial, Helvetica, Helv, Syntax, sans-serif; TEXT-ALIGN: center
+}
+A {
+	FONT-WEIGHT: bold; COLOR: black; TEXT-DECORATION: underline
+}
+A:link {
+	FONT-WEIGHT: bold; COLOR: black; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #004080; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #004080; TEXT-DECORATION: underline
+}
+.maintitle {background: url(../images/vtitler.png) repeat-x;}
