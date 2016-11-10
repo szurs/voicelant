@@ -1,0 +1,1 @@
+{<V(newdigits)"-123456"><V(pathdig)"c:\pers\my_c\now\disppat\duty\"><SCRIPT(BIND(V(pathdig):IN_STR,V(newdigits):IN_STR,V(mesarray):OUT_STR),F(C:\PERS\MY_C\NOW\DISPPAT\PATTERN\DIGITS_ENG.VBS))>?{<MV(mesarray)>}:{<M"error.wav">}}

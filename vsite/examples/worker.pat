@@ -1,0 +1,1 @@
+{LOOP("5")<M"EnterCodeWorker.wav"><R(2,8,"#")>?{<S(V(DTMF),"%#%")>?{<B>}:{<SQL(SERVICE("MSSQL"),BIND(V(DTMF):IN_STR),"select * from worker where number =?")>?{<M"codeworker.wav"><NV(DTMF)S><M"screw.wav"><CR(2)>}:{<M"errordb.wav">}}}:{<M"NOTDTMF.WAV">}}<M"goodbye.wav">

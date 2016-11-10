@@ -1,0 +1,1 @@
+{<SET(DIRA,"c:\vmail\5995\")><M(BEGIN)>{LOOP("20")<R(1,0)>?{<S(V(DTMF),"4")>?<M(BACK)>?{}:{<M(BEGIN)>}:{<S(V(DTMF),"6")>?<M(NEXT)>?{}:{<M"LASTMES.WAV">}:{<M(POINT)>}}}:{<M(NEXT)>?{}:{<M(BEGIN)>}}}}

@@ -1,0 +1,1 @@
+{<SET(DIRA,"c:\vmail\5995\")><M(BEGIN)><S(B(size_sec)<"300")>?{<WM(END)>}:{<M"OVERBOX.WAV"><CB(size_sec)N><M"seconds.wav">}}

@@ -1,0 +1,1 @@
+{<SET(DIRA,"c:\vmail\5995\")>{LOOP(60)<R(2,3)>?{<MV(DTMF)A>}:{<V(timemin)T(%M)><MV(timemin)A>}}}
