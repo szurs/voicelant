@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<param name="alink name" value="$topicid_plugin_oledb"></object>
+
+   <title>Voicelant-Plugin: Доступ к базам данных через OLEDB</title>
+   <META name="description" content="Voicelant-Plugin: OLEDB" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span class="f_Heading1" style="font-size: 12pt; font-weight: bold;">Доступ к базам данных через OLEDB</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="main_description.htm">Top</a>&nbsp;
+     <a href="plugin_odbc.htm">Previous</a>&nbsp;
+     <a href="plugin_smtp.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;">Данный стандартный универсальный плагин позволяет получить доступ к информации, хранимой в базах данных, к которым существуют провайдеры OLEDB.&nbsp; </p>
+<p style="margin: 0px 0px 0px 12px;">Плагин реализован на базе программной надстройки ADO над интерфейсом OLE DB. </p>
+<p style="margin: 0px 0px 0px 12px;">При инициализации плагина создается заданное количество потоков операционной системы, каждый из которых по строке подключения через OLE DB провайдер соединяется с сервером базы данных, образую пул соединений. Пул существует все время, пока выполняется приложение ServerVT. При разрыве связи или ошибках выполнения каждый поток из пула заново переустанавливает соединение с сервером БД. </p>
+<p style="margin: 0px 0px 0px 12px;">Источник запроса, например, канал, обслуживающий вызов, генерирует событие, предназначенное для этого плагина и передает на вход плагина строку SQL-запроса и, если необходимо, набор параметров строкового или числового типа с указанием направления передачи. Параметры связываются с SQL-запросом методами программного интерфейса ADO (binding). Запрос помещается в очередь и при освобождении одного из потоков пула соединений, исполняется этим потоком. </p>
+<p style="margin: 0px 0px 0px 12px;">После выполнения SQL-запроса возвращаемое значение строки  набора данных (Recordset) сохраняется в записи, которая передается обратно в приложение VolanTel, при этом генерируется событие для источника, пославшего запрос. Плагин позволяет также выполнять хранимые процедуры или функции баз данных, если они поддерживают такие возможности, при этом выходные параметры хранимой процедуры связываются с переменными VolanTel, поэтому для выходных параметров необходимо применять только переменные, для входных параметров можно использовать и непосредственные строковые значения. При успешном выполнении запроса к базе данных, условие выполнения плагина равно true, если во время выполнения запроса произошла ошибка, например, сбой соединения, то плагин возвращает условие выполнение = false, поэтому в приложении желательно проверять это условие. Если при вызове задан параметр "Not wait", то плагин не возвращает данных в приложение.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p style="margin: 0px 0px 0px 12px;">Плагин выполнен в виде файла OLEDB.PVT, который представляет собой DLL - библиотеку, подгружаемую в момент запуска приложения ServerVT. Соединение с сервером базы данных производится по строке подключения, в которой записаны параметры соединения выбранного провайдера OLEDB с соответствующим сервером базы данных. </p>
+<p style="margin: 0px 0px 0px 12px;">Этот плагин может иметь несколько <span style="color: #000000;">сервисов с разными именами -алиасов&nbsp; (например, </span><span style="color: #000000;">MУSQL </span><span style="color: #000000;">и </span><span style="color: #000000;">Mу-SQL</span><span style="color: #000000;">) для вызова из сценария при работе </span><span style="color: #000000;">VolanTel</span><span style="color: #000000;">. Каждый сервис имеет собственный набор параметров, например, количество потоков в пуле соединений для того, чтобы разделить запросы к различным источникам данных, имеющим разное время отклика. Параметры плагина хранятся в файле OLEDB</span><span style="color: #000000;">.INI</span><span style="color: #000000;">:</span> </p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">[MySQL]</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">ConnectionString=</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">CountThreads=20</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">[My-SQL]</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">ConnectionString=</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">CountThreads=2</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">Через сервис [MySQL] осуществляется доступ к рабочей базе данных MySQL, а через сервис [My-SQL] - доступ к другим, например, удаленным, MySQL-базам данных</span><span style="color: #000000;">. При этом в отличие от плагинов к базам данных MS-SQL и Oracle, нет ограничений на содержимое поля ConnectionString - здесь можно указывать любую подходящую строку подключения.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

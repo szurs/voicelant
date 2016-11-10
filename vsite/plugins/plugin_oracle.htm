@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<param name="alink name" value="$topicid_plugin_oracle"></object>
+
+
+   <title>Voicelant-Plugin: Доступ к базе данных Oracle</title>
+   <META name="description" content="Voicelant-Plugin: Oracle" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span class="f_Heading1" style="font-size: 12pt; font-weight: bold;">Доступ к базе данных Oracle</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="main_description.htm">Top</a>&nbsp;
+     <a href="plugin_mssql.htm">Previous</a>&nbsp;
+     <a href="plugin_txtdbf.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;">Этот специализированный плагин предназначен для запроса информации из базы данных Oracle. </p>
+<p style="margin: 0px 0px 0px 12px;">Реализован на базе программной надстройки ADO над интерфейсом OLE DB. </p>
+<p style="margin: 0px 0px 0px 12px;">При инициализации плагина создается заданное параметром количество потоков операционной системы, каждый из которых по строке подключения через OLE DB провайдер соединяется с сервером базы данных Oracle, образую пул соединений. Пул существует все время, пока выполняется приложение ServerVT. При разрыве связи или ошибках выполнения каждый поток из пула заново переустанавливает соединение с сервером БД. </p>
+<p style="margin: 0px 0px 0px 12px;">Источник запроса, например, канал, обслуживающий вызов, генерирует событие, предназначенное для этого плагина и передает на вход плагина строку SQL-запроса и, если необходимо, набор параметров строкового или числового типа с указанием направления передачи. Параметры связываются с SQL-запросом методами программного интерфейса ADO (binding). Запрос помещается в очередь и при освобождении одного из потоков пула соединений, исполняется этим потоком. </p>
+<p style="margin: 0px 0px 0px 12px;">После выполнения SQL-запроса возвращаемое значение строки  набора данных (Recordset) сохраняется в записи, которая передается обратно источнику запроса в приложение Voicelant. При этом возвращается только одна строка из набора данных, это надо учитывать при создании SQL-запросов. Плагин позволяет также выполнять хранимые процедуры или функции Oracle, при этом выходные параметры хранимой процедуры связываются с переменными Voicelant, поэтому для выходных параметров необходимо применять только переменные, для входных параметров можно использовать и непосредственные строковые значения. При успешном выполнении запроса к базе данных, условие выполнения плагина равно true, если во время выполнения запроса произошла ошибка, например, сбой соединения, то плагин возвращает условие выполнение = false, поэтому в приложении желательно проверять это условие. Если при вызове задан параметр "Not wait", то плагин не возвращает данных.&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p style="margin: 0px 0px 0px 12px;">Плагин выполнен в виде файла ORA.PVT, который представляет собой DLL - библиотеку, подгружаемую в момент запуска приложения ServerVT. Соединение с сервером базы данных Oracle производится по стандартной строке подключения "File Name=ORA.UDL",т.е. через файл ORA.UDL, в котором находятся параметры подключения к серверу Oracle. При настройке соединения можно воспользоваться провайдером OLEDB для Oracle, поставляемым фирмой Microsoft или провайдером разработанным самой компанией Oracle. При этом для разных провайдеров параметры настройки могут отличаться.&nbsp; </p>
+<p style="margin: 0px 0px 0px 12px;">Данный плагин может иметь несколько <span style="color: #000000;">сервисов с разными именами - алиасов&nbsp; (например, </span><span style="color: #000000;">ORA1 </span><span style="color: #000000;">и </span><span style="color: #000000;">ORA2</span><span style="color: #000000;">) для вызова из сценария при работе </span><span style="color: #000000;">Voicelant</span><span style="color: #000000;">. Каждый сервис имеет собственный набор параметров, например, количество потоков в пуле соединений для того, чтобы разделить запросы к различным источникам данных, имеющим разное время отклика. Параметры плагина хранятся в файле </span><span style="color: #000000;">ORA.INI</span><span style="color: #000000;">:</span> </p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">[ORA1]</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">ConnectionString=File Name=ora.udl</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">CountThreads=20</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">[ORA2]</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">ConnectionString=File Name=ora.udl</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">CountThreads=2</span></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="color: #000000;">Через сервис [ORA1] осуществляется доступ к рабочей базе данных, а через сервис [ORA2] - доступ к удаленной базе данных </span><span style="color: #000000;">Oracle</span><span style="color: #000000;">.</span><span style="color: #000000;">.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>
