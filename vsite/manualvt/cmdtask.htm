@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - New Task</title>
+   <META name="description" content="Command - New Task" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Задание (Task)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="cmdintercept.htm">Previous</a>&nbsp;
+     <a href="task_variables.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;"><img src="cmd_task.png" width="83" height="20" border="0" alt="cmd_task"></p>
+<p style="margin: 0px 0px 0px 18px;">Команда <span style="font-weight: bold;">&lt;Task&gt;</span> посылает на выполнение выбранному каналу новое задание в виде сценария.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="param_task.jpg" width="466" height="498" border="0" alt="param_task"></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="font-size: 8pt; font-family: 'MS Sans Serif';">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;"><a href="task_variables.htm">&lt;Variables&gt;</a></span> - закладка для установки переменных, передаваемых в сценарий задания.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;"><a href="task_source.htm">&lt;Task source&gt;</a></span> - закладка для установки сценария задания.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Wait 20 (s)&gt;</span> или <span style="font-weight: bold;">&lt;Not wait&gt;</span> - ждать (сколько секунд) или не ждать окончания выпонения задания.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Send task to "OUT" channel&gt;</span> - установка получателя задания: OUT - поиск свободного канала для выполнения исходящего вызова; INTERCEPTED - <a href="cmdintercept.htm"><img src="cmd_intercept.png" width="83" height="20" border="0" alt="cmd_intercept"></a>; EXTERNAL - для внешнего канала.</td></tr></table></div><p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">При получении задания выбранный удаленный канал начнет исполнять переданный сценарий, при этом все переменные, <a href="task_variables.htm">установленные</a> в задании будут ему доступны.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Если задано ждать N &gt; 0 секунд окончания выполнения задания, то возможны следующие варианты:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">1.</td><td>Если получатель задания OUT - канал, то текущий сценарий своего канала будет ожидать результат выполнения команды набора номера и установления исходящего соединения для канала, выполняющего задание.&nbsp; Результат выполнения задания можно увидеть в &lt;<a href="scen_sourcedata.htm">Record</a>&gt; с номером 0 или в <a href="scen_sourcedata.htm">переменной</a> "RETCODE". Возможные значения: CONNECT - исходящее соединение удаленным каналом установлено, BUSY - абонент занят, NOANSWER -  нет ответа. </td></tr></table></div><br>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">2.</td><td>Если получатель задания INTERCEPTED - канал, который уже был в состоянии вызова, то текущий сценарий своего канала будет ожидать окончания вызова для канала, выполняющего задание. Результат выполнения задания удаленным каналом также можно посмотреть в &lt;<a href="scen_sourcedata.htm">Record</a>&gt; с номером 0 или в <a href="scen_sourcedata.htm">переменной</a> "". Возможные значения: NORMAL - нормальное завершение вызова, BUSY - занято.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">3.</td><td>Если отведенный тайм-аут истек, то свой канал начнет выполнять сценарий, ранее загруженный командой&nbsp; <a href="cmdinclude.htm"><img src="cmd_include.png" width="83" height="20" border="0" alt="cmd_include"></a> - <span style="font-weight: bold;">&lt;Scenario after timeout&gt;</span> или вызов завершится, если такой сценарий не загружен.</td></tr></table></div><p style="text-indent: -27px; margin: 0px 0px 0px 44px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Условия, которые можно проверить после команды если канал для выполнения задания найден и может его принять, то <img src="up1.png" width="16" height="16" border="0" alt="up1">, если нет - то <img src="down1.png" width="16" height="16" border="0" alt="down1"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

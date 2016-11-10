@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - Call function from DLL</title>
+   <META name="description" content="Command - Call function from DLL" />
+   <meta name="keywords" content="Команда &quot;вызвать функцию из библиотеки DLL&quot; - DLL,Вызвать функцию из библиотеки DLL,DLL" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Вызвать функцию из библиотеки (DLL)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="vb_script.htm">Previous</a>&nbsp;
+     <a href="cmdplugin.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;"><img src="cmd_dll.png" width="83" height="20" border="0" alt="cmd_dll"></p>
+<p style="margin: 0px 0px 0px 18px;">Команда <span style="font-weight: bold;">&lt;DLL&gt;</span>  DLL.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Поддержка DLL реализована с помощью плагина DLL.pvt, который входит в стандартный комплект поставки Voicelant.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Сигнатуры для используемых функций:</p>
+<p style="margin: 0px 0px 0px 44px;"> &nbsp; &nbsp; &nbsp; &nbsp;int __stdcall FFuncZero();</p>
+<p style="margin: 0px 0px 0px 44px;"> &nbsp; &nbsp; &nbsp; &nbsp;int __stdcall FFuncOne(void*);</p>
+<p style="margin: 0px 0px 0px 44px;"> &nbsp; &nbsp; &nbsp; &nbsp;int __stdcall FFuncTwo(void*,void*);</p>
+<p style="margin: 0px 0px 0px 18px;"> &nbsp; &nbsp; &nbsp; &nbsp;int __stdcall FFuncThree(void*,void*,void*);</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">В вызываемых функциях можно использовать до 20 параметров. Тип параметров функции char* (STR) или int* (LONG), длина передаваемой и принимаемой строки <span style="text-decoration: underline;">не должна превышать 255 символов</span>;</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Параметры могут быть входящими (IN), исходящими (OUT) или передаваться в обе стороны (INOUT). Из всех стандартных источников данных <span style="text-decoration: underline;">только</span> переменные могут быть исходящими или двусторонними. Возврашаемое функциями значение&nbsp; - параметр с порядковым номером 0,&nbsp; всегда существует, даже если нет других переменных для передачи. После выполнения функции DLL ее значение можно получить из стандартных источников: через поле 0 записи &lt;<a href="scen_sourcedata.htm">Record</a>&gt; или <a href="scen_sourcedata.htm">переменную</a> "retcode".</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="dll.jpg" width="351" height="389" border="0" alt="dll"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Name DLL&gt;</span> - ввести имя или выбрать кнопкой нужную DLL;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Funtion&gt;</span> - ввести имя вызываемой функции;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Insert&gt;</span> - кнопка для добавления параметров (вставка после выбранного);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Delete&gt;</span> - кнопка для удаления выбранного параметра;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;DeleteAll&gt;</span> - кнопка для удаления всех параметров;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;</span><span style="font-weight: bold;">№</span><span style="font-weight: bold;">&gt;</span> - номер параметра;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Type&gt;</span> - тип параметра: STR - строка, LONG - число (для 0 параметра только BOOL);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;In/Out&gt;</span> - направление передачи параметра: IN - входящий параметр, OUT - исходящий параметр, INOUT - в обе стороны ;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Source&gt;</span>- <a href="scen_sourcedata.htm">стандартный</a> источник для параметра:</td></tr></table></div><p style="text-indent: -13px; margin: 0px 0px 0px 31px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="dll_param_source.jpg" width="377" height="376" border="0" alt="dll_param_source"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Exec function "GetNumber"&gt; from dll "MyDLL"&gt;</span> - строка комментария (изменяется);</td></tr></table></div><p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

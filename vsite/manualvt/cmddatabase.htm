@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - Query to Database</title>
+   <META name="description" content="Command - Query to Database" />
+   <meta name="keywords" content="Команда &quot;запрос к базе данных&quot; - Database,Запрос к базе данных,SQL-запрос,Database" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Запрос к базе данных (Database)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="cmdswitch.htm">Previous</a>&nbsp;
+     <a href="db_plugin.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;"><img src="cmd_db.png" width="83" height="20" border="0" alt="cmd_db"></p>
+<p style="margin: 0px 0px 0px 18px;">Команда <span style="font-weight: bold;">&lt;Database&gt;</span>  позволяет выполнить SQL - запрос к базе данных. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Доступ к различным базам данных (<span style="color: #000000;">ORACLE, MS SQL Server, MySQL, Interbase, MS Access, IBM DB2, PostgreSQL, Sybase, Informix, </span><span style="color: #000000;">DBF</span>) может осуществляться разными способами (OLE DB, ODBC, <span style="color: #000000;">специализированные API</span>) посредством установленных плагинов Voicelant.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">В стандартный комплект поставки Voicelant входит плагин MSSQL.pvt - для доступа к базе данных MS SQL Server через OLE DB провайдер. Плагин ODBC.pvt - для доступа к БД через ODBC драйвер, можно заказать на сайте Voicelant. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">В зависимости от запроса данные могут не возвращаться (SQL UPDATE или INSERT), возвращаться в виде записи <a href="scen_sourcedata.htm">Record</a> (SQL - SELECT) или в <a href="cmdvariable.htm">переменных</a> (для хранимых процедур).</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="db_plugins.jpg" width="351" height="444" border="0" alt="db_plugins"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;"><a href="db_plugin.htm">DB service</a></span>&gt; - закладка для выбора сервиса плагина, который обеспечивает доступ к базе данных;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;"><a href="db_param.htm">Parameters</a></span>&gt; - закладка для задания параметров, передаваемых в SQL - запрос (если необходимо);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;"><a href="db_sql.htm">Query source</a></span>&gt; - закладка для задания SQL - запроса;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Connection&gt; - </span>дополнительная строка соединения;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;">Wait</span><span style="font-weight: bold;"> 8 </span><span style="font-weight: bold;">sec</span>&gt; или &lt;<span style="font-weight: bold;">Not Wait</span>&gt; - ждать или не ждать окончания выполнения SQL - запроса;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;">Run query (wait 8 sec) from text "select * from tb" in database "MS-SQL"</span>&gt; - строка комментария (изменяется);</td></tr></table></div><p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

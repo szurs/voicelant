@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Parameters for plugin</title>
+   <META name="description" content="Parameters for plugin" />
+   <meta name="keywords" content="Задание параметров для плагина Voicelant" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Задание параметров для плагина</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="plugin_service.htm">Previous</a>&nbsp;
+     <a href="plugin_command.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;">Закладка <span style="font-weight: bold;">&lt;Parameters&gt;</span> - предназначена&nbsp; для задания параметров, передаваемых в плагин и получаемых из плагина (если необходимо).</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Тип параметра может быть LONG - число или STR - строка.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Направление передачи параметров - IN - входящий параметр, OUT - исходящий параметр, INOUT - в обе стороны.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Параметр с номером 0 всегда передается в плагин (даже если нет других параметров) и может использоваться для получения возвращаемого значения (например, для кода ошибки). </p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">После выполнения работы плагина возвращаемая информация может быть получена двумя способами (зависит от функций плагина):</p>
+<p style="margin: 0px 0px 0px 12px;">1. &nbsp; &nbsp; &nbsp; &nbsp; из стандартного источника &lt;<a href="scen_sourcedata.htm">Record</a>&gt; - запись с неограниченным числом полей, в которой поля нумеруются по порядку (от 0), при этом поле с номером 0 - возвращаемое значение параметра 0 - всегда тип LONG, а все остальные поля могут быть типа LONG или STR. (например, плагин MSSQL.pvt возвращает данные в &lt;Record&gt;-записи после выполнения SQL-запроса SELECT)&nbsp; </p>
+<p style="margin: 0px 0px 0px 12px;">2. &nbsp; &nbsp; &nbsp; &nbsp;через OUT или INOUT &lt;<a href="scen_sourcedata.htm">Variable</a></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;"><img src="plugin_param.jpg" width="351" height="444" border="0" alt="plugin_param"></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Insert&gt;</span>  - кнопка для добавления параметров (вставка после выбранного);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Delete&gt;</span> - кнопка для удаления выбранного параметра;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;DeleteAll&gt;</span> - кнопка для удаления всех параметров; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;№&gt;</span> - номер параметра;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Type&gt;</span> - тип параметра: STR - строка, LONG - число;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;In/Out&gt;</span> - направление передачи параметра: IN - входящий параметр, OUT - исходящий параметр, INOUT - в обе стороны;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Source&gt;</span> - <a href="scen_sourcedata.htm">стандартный</a> источник данных;</td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;"><img src="db_param_source.jpg" width="351" height="444" border="0" alt="db_param_source"></p>
+
+</td></tr></table>
+
+</body>
+</html>

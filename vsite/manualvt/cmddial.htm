@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - Dial Number</title>
+   <META name="description" content="Command - Dial Number" />
+   <meta name="keywords" content="Команда &quot;набрать номер&quot; - Dial,Вывести цифры DTMF,Проиграть DTMF,Установить соединение,Набрать номер,Dial" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Набрать номер (Dial)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="cmddtmf.htm">Previous</a>&nbsp;
+     <a href="cmderase.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;"><img src="cmd_dial.png" width="83" height="20" border="0" alt="cmd_dial"></p>
+<p style="margin: 0px 0px 0px 12px;">Команда<span style="font-weight: bold;"> &lt;Dial&gt;</span> набирает номер и устанавливает соединение (или, если соединение уже установлено - выводит цифры DTMF). Номер может быть получен из <a href="scen_sourcedata.htm">стандартных</a> источников: </p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;"><img src="dial.jpg" width="466" height="474" border="0" alt="Dial"></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;File&gt;</span> - ввести или выбрать кнопкой имя файла, в котором находится нужный номер;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Text&gt;</span> - ввести номер; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Variable&gt;</span> - ввести или выбрать переменную с номером;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Record&gt;</span> - набрать поле записи, содержащее необходимый номер для набора. </td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Если команда &lt;Dial&gt; вызывается при установленном телефоннном соединении, то она выводит в линию последовательность тональных сигналов DTMF, заданных номером. Если соединение не установлено, команда &lt;Dial&gt; пытается установить телефонное соединение по заданному номеру.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Условия выполнения - если соединение установилось (удаленный абонент снял трубку при вызове) - <img src="up1.png" width="16" height="16" border="0" alt="up1">, если нет - <img src="down1.png" width="16" height="16" border="0" alt="down1">.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Для целей перенаправления вызова (<a href="scen_transfer.htm">Transfer Call</a>) можно использовать символ &amp; (flash или Recall) с последущим набором требуемого номера (только для аналоговых линий и коммутаторов (PBX), поддерживающих данную услугу).</p>
+
+</td></tr></table>
+
+</body>
+</html>

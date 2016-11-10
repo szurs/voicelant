@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - Run VBScript</title>
+   <META name="description" content="Command - Run VBScript" />
+   <meta name="keywords" content="Команда &quot;выполнить скрипт VB&quot; - VBScript,Выполнить скрипт VB,Скрипт VisualBasic,VBScript" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Выполнить скрипт VB (VBScript)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="db_sql.htm">Previous</a>&nbsp;
+     <a href="vb_var.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;"><img src="cmd_vbscript.png" width="83" height="20" border="0" alt="cmd_vbscript"></p>
+<p style="margin: 0px 0px 0px 18px;">Команда <span style="font-weight: bold;">&lt;VBScript&gt;</span>  выполняет скрипт, написанный на языке VBScript.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Поддержка скриптов VB реализована с помощью плагина Script.pvt, который входит в стандартный комплект поставки Voicelant.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="vb_var.jpg" width="351" height="402" border="0" alt="vb_var"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;"><a href="vb_var.htm">Variables</a></span>&gt; - закладка для задания переменных, передаваемых в VBScript (если необходимо);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;"><a href="vb_script.htm">VBScript source</a></span>&gt; - закладка для задания самого скрипта на языке VBScript;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;">Wait</span><span style="font-weight: bold;"> 20 </span><span style="font-weight: bold;">sec</span>&gt; или &lt;<span style="font-weight: bold;">Not Wait</span>&gt; - ждать или не ждать окончания выполнения VB - скрипта;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;">Run VBScript from text "varn=varn+3||r0=2"</span>&gt; - строка комментария (изменяется);</td></tr></table></div><p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Для получения массива&nbsp; (array) строк после выполнения команды в обработчик скрипта на языке VBScript заранее введена переменная "vtarray" (из сценария не видна), значения которой в виде массива можно извлечь из записи <a href="scen_sourcedata.htm">&lt;Record&gt;</a>. Например, в теле скрипта можно написать:</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(0)="c:\Voicelant\serv_mes\ONE.wav"</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(1)="c:\Voicelant\serv_mes\TWO.wav"</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(2)="c:\Voicelant\serv_mes\TWO.wav";</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(3)="c:\Voicelant\serv_mes\FOUR.wav" </p>
+<p style="margin: 0px 0px 0px 18px;">и затем прочитать запись &lt;Record&gt;, как массив (array) файлов с помощью команды <a href="cmdmessage.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>.</p>
+<p style="margin: 0px 0px 0px 18px;">Это бывает необходимо для поддержки <a href="scen_multillanguage.htm">многоязычности</a>, т.к., например, правила чтения валют в разных странах могут различаться.&nbsp;&nbsp; </p>
+
+</td></tr></table>
+
+</body>
+</html>

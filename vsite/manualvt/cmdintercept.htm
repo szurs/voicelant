@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - Intercept Channel</title>
+   <META name="description" content="Command - Intercept Channel" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Перехват канала (Intercept)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="plugin_command.htm">Previous</a>&nbsp;
+     <a href="cmdtask.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;"><img src="cmd_intercept.png" width="83" height="20" border="0" alt="cmd_intercept"></p>
+<p style="margin: 0px 0px 0px 12px;">Команда <span style="font-weight: bold;">&lt;Intercept&gt; </span>производит поиск канала по заданным критериям и сохраняет ссылку на него. Далее ссылка на найденный канал может использоваться командами <a href="cmdtask.htm"><img src="cmd_task.png" width="83" height="20" border="0" alt="cmd_task"></a> - для выполнения каналом нового задания (например, сценария исходящего вызова) и <a href="cmdroute.htm"><img src="cmd_route.png" width="83" height="20" border="0" alt="cmd_route"></a> - для связывания двух каналов (своего и найденного).</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;"><img src="intercept.jpg" width="466" height="256" border="0" alt="intercept"></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">В левой части окна&nbsp; - возможные критерии для поиска. В правой части окна&nbsp; - набор выбранных критериев для поиска. </p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Выбор и удаление критериев производится кнопками "&gt;" и "&lt;". Данные для выбранного критерия можно задать кнопкой &lt;Data&gt;.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CHAN_TYPE&gt; - тип канала: IN - входящий канал, OUT - исходящий канал, INOUT - работает в обоих направлениях, UNDEF - неопределено.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CHAN_SELECT&gt; - выбор канала: ANY - любой канал.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CHAN_STATE&gt; - текущее состояние канала: IDLE - канал свободен, CONNECT - канал в состоянии проключенного вызова, UNDEF - неопределено.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CALL_DIRECTION&gt; - направление вызова (только для каналов в состоянии вызова): IN - входящий вызов, OUT - исходящий вызов, UNDEF - неопределено. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CALLING_NUM&gt; - номер вызывающего абонента (только для каналов в состоянии вызова).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CALLED_NUM&gt; - номер вызываемого абонента (только для каналов в состоянии вызова).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;REDIR_NUM&gt; - номер, с которого была переадресация (только для каналов в состоянии входящего вызова и при наличии соответствующей возможности сигнализации).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;CALL_CATEGORY&gt; - категория вызывающего абонента (только для каналов в состоянии входящего вызова и при наличии соответствующей возможности сигнализации)."10" - категория "обычного" абонента.</td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Данные для критериев &lt;CALLING_NUM&gt;, &lt;CALLED_NUM&gt;, &lt;REDIR_NUM&gt; задаются из <a href="scen_sourcedata.htm">стандартных</a> источников:</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;"><img src="source_intercept.jpg" width="377" height="259" border="0" alt="source_intercept"></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Если критерий не выбран, то он не учитываеся при поиске. Если не выбран ни один критерий, то производится поиск канала для совершения исходящего вызова. "Свой" канал при поиске не учитывается.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">Если канал найден, то <img src="up1.png" width="16" height="16" border="0" alt="up1">, если нет - то <img src="down1.png" width="16" height="16" border="0" alt="down1"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

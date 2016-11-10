@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Features - Service Box</title>
+   <META name="description" content="Features - Service Box" />
+   <meta name="keywords" content="Особенности - логический контейнер услуги,Логический контейнер услуги,Подкаталог услуги,Ящик услуги" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Logical container of service</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="features_presentation.htm">Previous</a>&nbsp;
+     <a href="features_scope.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;">When creating new services is recommended to pack them in a logical container (service box).</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Logical container of service - this is a sub-directory of file system, which contains all messages (voice and fax files), and auxiliary files needed at work and scenario for processing of this service.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Messages of service - files formats are WAV or TIF, ie sound or fax. They have <span style="font-weight: bold;">digital</span> names (for example, from 000001.wav to 999999.tif). The first message of service - the title, always has a name 0.WAV.</p>
+<p style="margin: 0px 0px 0px 18px;"> To set the directory container has a command <a href="cmdset.htm"><img src="cmd_set.png" width="83" height="20" border="0" alt="cmd_set"></a> -<span style="font-weight: bold;">&lt;</span><span style="font-weight: bold;"><a href="cmdset.htm">Set - Work Directory</a></span><span style="font-weight: bold;">&gt;</span>. To set the size of container&nbsp; - <span style="font-weight: bold;">&lt;</span><span style="font-weight: bold;"><a href="cmdset.htm">Set - Capacity of Box</a></span><span style="font-weight: bold;">.&gt;</span></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><br><span style="color: #ff00ff;">Voicelant</span> has special data types, which move the indicator (pointer) inside the container services:</p>
+<p style="margin: 10px 0px 0px 18px;">BEGIN - move on to the title;</p>
+<p style="margin: 0px 0px 0px 18px;">END - go to last message of service; </p>
+<p style="margin: 0px 0px 0px 18px;">NEXT - go to next message;</p>
+<p style="margin: 0px 0px 0px 18px;">BACK - to move to the previous message;</p>
+<p style="margin: 0px 0px 0px 18px;">POINT - current message;</p>
+<p style="margin: 0px 0px 0px 18px;">Handling these types of data produced by different commands, depending on the context, for example, the command <a href="cmdmessage_box.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a> with data type "BEGIN" plays the sound of the title 0.WAV, and the next command&nbsp; <a href="cmdmessage_box.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a> with data type "NEXT" plays sound (or displays fax) from a file, the next in order for the title.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">You also can play messages under their numbers in a service box.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Command  <a href="cmdrecord.htm"><img src="cmd_record.png" width="83" height="20" border="0" alt="cmd_record"></a> writes the message in place, that is an indicator, the order of messages is not violated</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Command&nbsp; <a href="cmderase.htm"><img src="cmd_erase.png" width="83" height="20" border="0" alt="cmd_erase"></a> deletes the message, that is an indicator (the title will never be removed, but it can be rewritten).</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Sound files in a container with non-numerical names may be used as an auxiliary in the formation of the response of the service subscriber. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Scenario files (.PAT) are used to specify the logic of this service.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>  </p>
+
+</td></tr></table>
+
+</body>
+</html>

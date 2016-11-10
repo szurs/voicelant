@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Command - Switch by key</title>
+   <META name="description" content="Command - Switch by key" />
+   <meta name="keywords" content="Команда &quot;выбор по ключу&quot; - Switch,Выбор по ключу,Case,Switch" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Выбор по ключу (Switch)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="cmdcompare.htm">Previous</a>&nbsp;
+     <a href="cmddatabase.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;"><img src="cmd_switch.png" width="83" height="20" border="0" alt="cmd_switch"></p>
+<p style="margin: 0px 0px 0px 18px;">Команда <span style="font-weight: bold;">&lt;Switch&gt;</span>  производит сравнение данных ключа (полученных из <a href="scen_sourcedata.htm">стандартных</a> источников) с данными вариантов выбора и выполняет сценарий, соответствующий варианту совпадения данных. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="switch_cases.jpg" width="466" height="516" border="0" alt="switch_cases"></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Cases&gt;</span> - закладка задания количества вариантов;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Number of cases&gt;</span> - набор количества вариантов выбора;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>&lt;<span style="font-weight: bold;">Source&gt;</span> - закладка&nbsp; для задания данных ключа (см. <a href="scen_sourcedata.htm">стандартные источники данных</a>):</td></tr></table></div><p style="margin: 0px 0px 0px 18px;"><img src="switch_source.jpg" width="466" height="516" border="0" alt="switch_source"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Пример команды &lt;Switch&gt;, в которой в качестве ключа выбрана переменная DTMF и задано 3 варианта выбора:</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="sample_switch.jpg" width="328" height="336" border="0" alt="sample_switch"></p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Если переменная DTMF равна 1, то читается файл "1.wav", если равна 2&nbsp; - то файл "2.wav", если не 1 и не 2, а любому другому символу - то "not.wav". </p>
+<p style="margin: 0px 0px 0px 18px;">Источники данных для вариантов выбора <img src="cmd_case.png" width="16" height="16" border="0" alt="cmd_case"> можно выбирать через правую кнопку мыши -&gt; &lt;Properties&gt;.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">При сравнении можно использовать "подстановочные" символы (wildcard) - "_" и "%", где "_" - заменяет любой один символ, а "%" - может заменять любое количество символов. Например, строки "My name is Voicelant" и "M_ na_e % Voicelant" равны.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Количество вариантов выбора для команды &lt;Switch&gt; можно добавлять через &lt;Properties&gt; -&gt; &lt;Number of cases&gt;. Удалять варианты выбора&nbsp; <img src="cmd_case.png" width="16" height="16" border="0" alt="cmd_case"> можно через правую кнопку мыши -&gt; &lt;Delete&gt;.</p>
+
+</td></tr></table>
+
+</body>
+</html>
