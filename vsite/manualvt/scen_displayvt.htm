@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Scenario - Check</title>
+   <META name="description" content="Scenario - Check" />
+   <meta name="keywords" content="Проверка (прогон) сценария - DisplayVT,DisplayVT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Проверка (прогон) сценария - DisplayVT</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="scen_transfer.htm">Previous</a>&nbsp;
+     <a href="cmdmessage.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;">Проверка сценария, созданного с помощью <a href="scen_visualvt.htm">VisualVT</a>, производится с помощью программы DisplayVT, которая может запускаться как из оболочки VisualVT, так и отдельно. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">При проверке осуществляется прогон сценария, максимально приближенный к фактическому вызову при установленном соединении. Перед началом прогона подключаются все плагины, можно ввести дополнительные данные вызова. Речевые файлы воспроизводятся через звуковую карту, пользователь может ввести сигналы DTMF с помощью цифровой клавиатуры. Таким образом можно настраивать работу услуг без подключения их к работающей системе. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Если DisplayVT запускается как отдельная программа, то в верхней строке редактирования можно ввести сценарий или загрузить его из файла , но обычно запускается из приложения <a href="scen_visualvt.htm">VisualVT</a> - кнопка <img src="run.png" width="16" height="16" border="0" alt="run"> (Run). </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="displayvt.jpg" width="874" height="580" border="0" alt="DisplayVT"></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-weight: bold;">&lt;DNIS&gt;</span> - ввести набираемый номер (заносится в <a href="scen_sourcedata.htm">переменную</a> DNIS);</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-weight: bold;">&lt;ANI&gt;</span> - ввести номер звонящего (заносится в <a href="scen_sourcedata.htm">переменную</a> ANI);</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-weight: bold;">&lt;REDIRNUM&gt;</span> - ввести номер переадресации (заносится в <a href="scen_sourcedata.htm">переменную</a> REDIRNUM, только для ОКС7);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Play Messages&gt;</span> - если отмечен, то сообщения проигрываются через звуковую карту, если нет - только визуальный вывод;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;NumPad&gt;</span> - клавиатура обычного телефонного аппарата, используется для ввода сигналов DTMF;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Start&gt;</span> - запуск прогона;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Stop&gt;</span> - остановка прогона;</td></tr></table></div><p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;">Ограничения:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">1.</td><td>Не набирает номер и не устанавливает соединения.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">2.</td><td>Не понимает факсов.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">3.</td><td>Не воспроизводит сигналы DTMF</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">4. </td><td>Не записывает сообщения. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">5.</td><td>Не выполняет команды <a href="cmdroute.htm"><img src="cmd_route.png" width="83" height="20" border="0" alt="cmd_route"></a>, <a href="cmdintercept.htm"><img src="cmd_intercept.png" width="83" height="20" border="0" alt="cmd_intercept"></a></td></tr></table></div><p style="text-indent: -27px; margin: 0px 0px 0px 44px;"> &nbsp; &nbsp; &nbsp; &nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

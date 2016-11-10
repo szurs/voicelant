@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Setting Protocols</title>
+   <META name="description" content="Tuning Protocols" />
+   <meta name="keywords" content="Настройка протоколов" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Maintenance protocol</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="tuningvt_start.htm">Previous</a>&nbsp;
+     <a href="tuningvt_alarm.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top">
+<td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;"><img src="tuning_protocol.jpg" width="538" height="522" border="0" alt="tuning_protocol"></p>
+<p style="margin: 0px 0px 0px 12px;"><span style="color: #000000;">Tab </span><span style="font-weight: bold; color: #000000;">&lt;Protocol&gt;</span>
+<span style="color: #000000;"> - setting options for protocols </span><span style="color: #000000;">Voicelant</span><span style="color: #000000;">.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-weight: bold;">&lt;Hard protocol&gt;</span>  - <span style="color: #000000;"> If checked, the system Voicelant writes log for incoming and outgoing calls. Logs are produced for each channel and stored in text files with names like "YYYYMMDD_HHMMSS_XXX. Log" in subdirectory \PROTOCOL, where YYYYMMDD - year, month, date (creation date), HHMMSS - hours, minutes, seconds (time of creation), XXX - channel number. Each call is recorded in the file as a string "DNIS: 648923 ANI: 3422900197 Date: 11/19/04 Time: 11:56:15 N: * N: 3294 # DISC: NET DateEnd: 11/19/04 TimeEnd: 11: 59:41, where DNIS: 648923 - the destination number, ANI: 3422900197 - the number of the caller, Date: 11/19/04 Time: 11:56:15 - Date and time of the call, N: * N: # 3294 - DTMF codes, entered by caller</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold; color: #000000;">&lt;</span><span style="font-weight: bold; color: #000000;">Enter max size of protocol for each channel (Mb)</span><span style="font-weight: bold; color: #000000;">&gt;</span><span style="color: #000000;"> - </span><span style="color: #000000;"> the maximum size of the log file for the achievement of which creates a new file. </span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-weight: bold;">&lt;Test protocol&gt;</span> - <span style="color: #000000;"> If checked, the system keeps a test protocol, which can be used to detect abnormal situations in the telephone network. In normal operation, this log must be turned off.</span></td></tr></table></div><p style="margin: 0px 0px 0px 12px;"><span style="color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 12px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #000000;">In addition, the system can keep a record of incoming and outgoing calls in the form of records in the database table (for which there is access through </span><span style="color: #000000;"><a href="tuningvt_plugins.htm">plugin</a></span><span style="color: #000000;">). Maintaining such a protocol is defined by the relevant scenario.</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Scenario - Organization</title>
+   <META name="description" content="Scenario - Organization" />
+   <meta name="keywords" content="Организация сценария" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Scenario - Organization</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="scen_visualvt.htm">Previous</a>&nbsp;
+     <a href="scen_typemes.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;">When you create a script using <a href="scen_visualvt.htm">VisualVT</a> need to know some features of organization and rules:</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline"><td width="27">1.</td>
+<td>Scenario - a program written in a script-like language, and presented visually in a tree in the program VisualVT. Executing the script is top down.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline">
+<td width="27">2.</td><td>The elements of language - <a href="scen_typecommand.htm">commands</a>, that can take data from <a href="scen_sourcedata.htm">standard sources</a> and after returning them to the variables and records. All commands are elementary in the sense that perform only the final action.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">3.</td><td><a href="scen_sourcedata.htm">Standard sources </a> of data this is sort of a finite set of types of "containers" containing the necessary information. For different sets of commands specific data sources may be different.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">4.</td>
+<td>For presentation of data uses two types - text (STR) and numeric (LONG). The main type - text. Plugins need to specify a particular type and direction of data transmission. </td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">5.</td><td>Script commands can be grouped by limiting their braces ({ and }), see <a href="cmdloop.htm"><img src="cmd_loop.png" width="83" height="20" border="0" alt="cmd_loop"></a>). This final piece of the script can be written in a file with context menu (&lt;Save to file + Include&gt;) and further connected to the script as necessary by command <a href="cmdinclude.htm"><img src="cmd_include.png" width="83" height="20" border="0" alt="cmd_include"></a>. Nested parentheses is not limited. </td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">6.</td><td>Branching in the scenario are organized in terms of (<img src="up1.png" width="16" height="16" border="0" alt="up1"> - Successfully , <img src="down1.png" width="16" height="16" border="0" alt="down1"> - Fails, always in pairs), which are checked after executing commands. If condition True - <img src="up1.png" width="16" height="16" border="0" alt="up1"> then all script commands inside the curly brackets are executed before <img src="down1.png" width="16" height="16" border="0" alt="down1">. If condidion False - <img src="down1.png" width="16" height="16" border="0" alt="down1"> - then run all commands in curly brackets or one command after <img src="down1.png" width="16" height="16" border="0" alt="down1"> .</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">7.</td><td>A command <a href="cmdswitch.htm"><img src="cmd_switch.png" width="83" height="20" border="0" alt="cmd_switch"></a> is intended for a choice from various variants of branching. It compares data of key (obtained from <a href="scen_sourcedata.htm">standard</a> sources) with the variants of choices <img src="cmd_case.png" width="16" height="16" border="0" alt="cmd_case"> and executes the script corresponding coincidence.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">8.</td><td>Cycles in the scripts are organized within the braces, which comprises a group of commands. The number of repetitions of the cycle can be obtained from <a href="scen_sourcedata.htm">standard sources</a>. Cycle with the number of repetitions equal to 1 - it's just braces. Exit from the cycle - to achieve the number of repetitions or by command <a href="cmdstop.htm"><img src="cmd_stop.png" width="83" height="20" border="0" alt="cmd_stop"></a></td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">9.</td><td>Files used to create scenarios, grouped by type and placed in the appropriate subdirectories:</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\Serv_Mes - working library of audio files of system;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\DUTY - library files for reading numbers and currency values;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\DATE - library files for reading dates;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\TIME -  library files for reading time;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\CHAR - a library of sound files of characters;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\PATTERN - files of scenarios;</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 45px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td>\PLUGINS - files installed plug-ins; </td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">10.</td><td>If you plan to provide many different types of services, it is recommended to pack them in <a href="features_servicebox.htm">logical containers</a>.</td></tr></table></div>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Sample script that allows you to listen to 5 times the data on wages of employees by their codes, entered a touch-tone method. Extracted from the database on SQL - query. If a symbol # is entered, then the call is completed.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="sample_scen.jpg" width="688" height="654" border="0" alt="sample_scen"></p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;">Consider the script line by line:</p>
+
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">1.</td><td>&lt;<img src="sign_braceloop.png" width="16" height="16" border="0" alt="sign_braceloop"> Loop count = 5&gt; (see <a href="cmdloop.htm">
+<img src="cmd_loop.png" width="83" height="20" border="0" alt="cmd_loop"></a>) -  a cycle in the curly brackets, the number of repetitions of the cycle - 5;
+</td></tr></table></div>
+
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">2.</td>
+<td>&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_braceloop"> Read message from file "EnterCodeWorker.wav"&gt;
+(see <a href="cmdmessage_playfile.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>)
+-  reading file EnterCodeWorker.wav from subdirectory \Serv_Mes;
+</td></tr></table></div>
+
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">3.</td>
+<td>&lt;<img src="sign_dtmf.png" width="16" height="16" border="0" alt="sign_dtmf"> Receive 2 DTMF Digits with Duration 8 seconds and Terminator = "#"&gt;
+(see <a href="cmddtmf.htm"><img src="cmd_dtmf.png" width="83" height="20" border="0" alt="cmd_dtmf"></a>)
+- receive 2 DTMF characters, expecting every 8 seconds to complete the input symbol #.
+ You can enter before two symbols as code of employee but if you enter terminator # then it will be deleted from string of enter and cycle will be completed. Symbols are stored in the variable DTMF.</td></tr></table></div>
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">4.</td>
+ <td>&lt;<img src="up1.png" width="16" height="16" border="0" alt="up1"> Digits are received&gt; - the condition is successful: received 2 digits DTMF, or the symbol "#".</td></tr></table></div>
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">5.</td>
+ <td><img src="sign_braces.png" width="16" height="16" border="0" alt="sign_braces">Оpen Brace&gt; - opening brace, limiting the group of commands that must be met if the condition was successfully <img src="up1.png" width="16" height="16" border="0" alt="up1">, i.e. digits DTMF are received.</td></tr></table></div>
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">6.</td>
+ <td>&lt;<img src="sign_compare.png" width="16" height="16" border="0" alt="sign_compare"> Is variable "DTMF" equal text "%#%"&gt; (see <a href="cmdcompare.htm"><img src="cmd_compare.png" width="83" height="20" border="0" alt="cmd_compare"></a>)
+ - A comparison of the variable DTMF (received characters) with a string containing a wildcard characters. As wildcard symbols you can use: "%" - to replace any number of characters, "_" - to replace one character (in the Windows "*" and "?", But "*" is on the telephone keypad). Here we check whether the entered symbol "#".</td></tr></table></div>
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">7.</td>
+ <td>&lt;<img src="up1.png" width="16" height="16" border="0" alt="up1"> Yes&gt; - yes, the symbol "#" is present in variable DTMF.</td></tr></table></div>
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">8.</td>
+ <td>&lt;<img src="sign_braces.png" width="16" height="16" border="0" alt="sign_braces">Оpen Brace&gt; - opening brace for the commands that are executed, if was entered character "#".</td></tr></table></div>
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">9.</td>
+ <td>&lt;<img src="sign_break.png" width="16" height="16" border="0" alt="sign_break"> Break current loop&gt; (see <a href="cmdstop.htm"><img src="cmd_stop.png" width="83" height="20" border="0" alt="cmd_stop"></a>) - exit from current cycle and move to string № 32.</td></tr></table></div>
+
+ <div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+ <table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+ <td width="27">10.</td>
+ <td>&lt;<img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_break"> Close brace&gt; -  closing bracket for line number 8.</td></tr></table></div>
+
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">11.</td>
+<td>&lt;<img src="down1.png" width="16" height="16" border="0" alt="down1"> - No&gt; - condition is false, i.e  symbol "#" wasn't received and characters (two digits) of employee's code were received.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">12.</td>
+<td>&lt;<img src="sign_braces.png" width="16" height="16" border="0" alt="sign_braces">Оpen Brace&gt; - opening brace for the commands that are executed, if condition is false <img src="down1.png" width="16" height="16" border="0" alt="down1">, i.e. process data in a variable DTMF</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">13.</td><td>&lt;<img src="sign_db.png" width="16" height="16" border="0" alt="sign_db"> Run query from text "select * from workers where number = ?" in database "MSSQL"&gt; (see <a href="cmddatabase.htm"><img src="cmd_db.png" width="83" height="20" border="0" alt="cmd_db"></a>)&nbsp; - Query the database, connected via the plug-in "MSSQL", where instead of ? substitutes the value of DTMF. Request written on SQL language.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">14.</td><td>&lt;<img src="up1.png" width="16" height="16" border="0" alt="up1"> Success&gt; - database query is executed successfully and in record <a href="scen_sourcedata.htm">&lt;Record&gt;</a> are data of Recordset after completed SQL - query "select...";</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">15.</td><td>&lt;<img src="sign_braces.png" width="16" height="16" border="0" alt="sign_braces">Оpen Brace&gt; - opening brace for the commands that must be run if SQL - query is completed well.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">16.</td><td>&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_play"> Read message from file "CodeWorker.wav"&gt; (see <a href="cmdmessage_playfile.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>) - reading file CodeWorker.wav from subdirectory \Serv_Mes  ("Your code employee..."). Reading can be interrupted by entering any symbol DTMF, after that run of scenario is continued and will go to string 3 by cycle (or call terminated);</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">17.</td><td>&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_play"> Digits from variable DTMF&gt; (see <a href="cmdmessage_digits.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>) - reading sequence of digits from variable DTMF, for example, 23 - "two three". Reading can be terminated by entering any DTMF digit.</td></tr></table></div>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline">
+<td width="27">18.</td><
+td> &nbsp; &nbsp; &nbsp; &nbsp;&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_play"> Read message from file "Screw.wav"&gt; (см. <a href="cmdmessage_playfile.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>чтение файла Screw.wav из подкаталога \Serv_Mes ("Ваша зарплата составляет...").</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">19.</td><td><img src="sign_play.png" width="16" height="16" border="0" alt="sign_play"> Amount of money from record "2"&gt; - чтение денежной величины из поля №2 записи <a href="cmdrecord.htm">&lt;Record&gt; </a>, в которой хранятся данные после успешного выполнения SQL-запроса - строка № 14. Например, "One <span style="font-family: 'Context SSerif';">hundred dollars"</span><span style="font-family: 'Context SSerif';">.</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">20.</td><td>&lt;<img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_endbrace">Close brace&gt; - закрывающая скобка строки № 15.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">21.</td><td>&lt;<img src="down1.png" width="16" height="16" border="0" alt="down1"> - Error&gt; - SQL - запроса - строка № 13;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">22.</td><td><img src="sign_braces.png" width="16" height="16" border="0" alt="sign_braces">Оpen Brace&gt; - открывающая фигурная скобка для команд, которые должны выполняться в случае ошибки выполнения SQL - запроса - строка № 21;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">23.</td><td> &nbsp; &nbsp; &nbsp; &nbsp;&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_play">см. <a href="cmdmessage_playfile.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>) - чтение файла&nbsp; из подкаталога \Serv_Mes ("Ошибка базы данных");</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">24.</td><td><img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_endbrace">Close brace&gt; - закрывающая скобка строки № 22;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">25.</td><td>&lt;<img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_endbrace">Close brace&gt; - закрывающая скобка строки № 12;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">26.</td><td><img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_endbrace">Close brace&gt; - закрывающая скобка строки № 5;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">27.</td><td>&lt;<img src="down1.png" width="16" height="16" border="0" alt="down1"> - Timeout&gt; - завершился таймаут для ввода цифр DTMF - строка № 3;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">28.</td><td>&lt;<img src="sign_braces.png" width="16" height="16" border="0" alt="sign_braces">Оpen Brace&gt; - открывающая фигурная скобка для команд, определяющих действия после завершения таймаута - строка № 27;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">29.</td><td>&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_play"> Read message from file "NOTDTMF.WAV"&gt; (см. <a href="cmdmessage_playfile.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>) - чтение файла NOTDTMF.WAV из подкаталога \Serv_Mes ("Неправильно введен код работника");</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">30.</td><td>&lt;<img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_endbrace">Close brace&gt; - закрывающая скобка строки № 28;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">31.</td><td>&lt;<img src="sign_endbrace.png" width="16" height="16" border="0" alt="sign_endbrace">Close brace&gt; - закрывающая скобка строки № 1 - ограничивает команды цикла;</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">32.</td><td> &nbsp; &nbsp; &nbsp; &nbsp;&lt;<img src="sign_play.png" width="16" height="16" border="0" alt="sign_play"> Read message from file "goodbye.wav"&gt; (см. <a href="cmdmessage_playfile.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>) - чтение файла goodbye.wav из подкаталога \Serv_Mes ("До свидания");</td></tr></table></div><p style="text-indent: -27px; margin: 0px 0px 0px 44px;">&nbsp;</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;">&nbsp;</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;">&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

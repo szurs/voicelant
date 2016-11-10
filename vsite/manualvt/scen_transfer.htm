@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Scenario - Transfer Call and Conferencing</title>
+   <META name="description" content="Scenario - Transfer Call and Conferencing" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Перенаправление вызова и</span><span style="font-size: 12pt; font-weight: bold;"> </span><span style="font-size: 12pt; font-weight: bold;">конференция (</span><span style="font-size: 12pt; font-weight: bold;">T</span><span style="font-size: 12pt; font-weight: bold;">ransfer Call </span><span style="font-size: 12pt; font-weight: bold;">and Conferencing</span><span style="font-size: 12pt; font-weight: bold;">)</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="scen_plugins.htm">Previous</a>&nbsp;
+     <a href="scen_displayvt.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Перенаправление вызова (Transfer Call) - передача входящего вызова в выбранном направлении или на другой телефонный номер. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Конференция (Conferencing) - одновременная связь нескольких участников, обычно 3.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Чтобы перенаправить вызов на другой телефонный номер существует два способа:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>воспользоваться возможностями, предоставляемыми телефонной станцией, к которой подключена плата Dialogc.Это так называемый hookflash transfer. Большинство коммутаторов или PBX имеют такие возможности. Voicelant может быть настроен для работы практически с любыми их типами.&nbsp; В этом случае производится набор специального сигнала "&amp;", который также имеет названия "flash" или "recall". Многие телефонные аппараты имеют клавишу "R" или "flash" как раз для этих целей. После сигнала "&amp;" набирается нужный номер. Затем, в зависимости от сценария, вызов сразу завершается или Voicelant, например, сообщает новому абоненту, что это переадресованный вызов и затем "кладет трубку". При этом станция соединяет вызывающего и нового абонента, а&nbsp; Voicelant выходит из игры.&nbsp;&nbsp;&nbsp; </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 18px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td>с помощью самой платы Dialogic, которая должна иметь на борту шину SC-bus или CT-bus. В этом случае устанавливается соединение с набором номера по другому каналу, затем входящий и исходящий каналы связываются для разговора.</td></tr></table></div><p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Первый способ применяется для телефонных плат, подключенных к аналоговым телефонным линиям. Также возможна организация конференции абонентов с числом участников 3 и более. Для этого используются возможности коммутатора, который предоставляет эту услугу. В этом случае, Voicelant, в зависимости от сценария, может, например, записать разговоры абонентов.&nbsp; </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Второй способ обычно применяется для многоканальных плат, подключенных по цифровым интерфейсам, но может применяться и для аналоговых плат, оборудованных шиной SC-bus или CT-bus. В этом случае для соединения абонентов задействуются два канала.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Примеры основных сценариев:</p>
+<p style="margin: 0px 0px 0px 18px;">1. Слепая переадресация вызова (Blind hookflash transfer), зависит от возможности станции (PBX) -   </p>
+<p style="margin: 0px 0px 0px 18px;"><img src="example_blind_transfer.jpg" width="257" height="156" border="0" alt="example_blind_transfer"></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">При такой переадресации набирается номер "&amp;,,2345673", где &amp; - сигнал FLASH или RECALL, запятые - вводят паузу в последовательность набора, 2345673 - номер телефона, на который переводится вызов. После набора соединение сбрасывается. Некоторые коммутаторы требуют наличия сигнала вызова на удаленной стороне, в этом случае можно после набора телефонного омера набрать одну или две запятые для паузы.</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 17px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="27">2. Управляемый перевод вызова </td><td></td></tr></table></div><p style="margin: 0px 0px 0px 18px;"><img src="example_monitor_transfer.jpg" width="395" height="870" border="0" alt="example_monitor_transfer"></p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">При такой передаче вызова набирается номер "&amp;,,2345673", где &amp; - сигнал FLASH или , запятые - вводят паузу в последовательность набора, 2345673 - номер телефона, на который переводится вызов. После набора анализируется состояние вызова. Если новый абонент ответил, то ему произносстся номер телефона абонента, с которого переводится вызов и предлагается продолжить с ним разговор нажатием клавиши 1. Если абонент нажал 1, то соединение Voicelant сбрасывается и абоненты продолжают разговор. Если новый абонент отказался продолжать разговор, то по сценарию снова набирается &amp; (FLASH) для возврата вызова с предыдущим абонентом и затем соединение с ним завершается. Переменая содержит текстовое значение причины неудачного соединения - BUSY (занято), NOANSWER (нет ответа), NORINGBACK (нет&nbsp; КПВ), которое можно использовать для ответа.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;">3.Конференц-связь трех абонентов.</p>
+<p style="margin: 0px 0px 0px 18px;">После звонка абоненту А, набирается символ &amp;, абонент А переводится в состояниние ожидания. Затем набирается номер абонента Б. После этого набором символа &amp; Voicelant, который может записать разговор командой&nbsp; <a href="cmdrecord.htm"><img src="cmd_record.png" width="83" height="20" border="0" alt="cmd_record"></a>. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">4. Этот пример показывает возможность перенаправления вызова через плату посредством установления нового вызова и соединения двух абонентов по внутренней шине.&nbsp; </p>
+<p style="text-indent: -27px; margin: 0px 0px 0px 44px;"><img src="example_bus_transfer.jpg" width="657" height="63" border="0" alt="example_bus_transfer"></p>
+<p style="margin: 0px 0px 0px 18px;">Для этого из сценария текущего вызова в свободный канал посылается задача в виде текста сценария на установление исходящего вызова с выбранным номером телефона, затем оба канала связываются посредством команды <a href="cmdroute.htm"><img src="cmd_route.png" width="83" height="20" border="0" alt="cmd_route"></a> уже со стороны нового канала, выполняющего посланный сценарий. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">Все эти сценарии приведны в качестве примеров для знакомства со способами перенаправления вызова и организации конференции. Реальные сценарии могут отличаться от примеров и быть гораздо сложнее. </p>
+
+</td></tr></table>
+
+</body>
+</html>

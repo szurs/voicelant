@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Tuning parameters for outbound calls</title>
+   <META name="description" content="Tuning parameters for outbound calls" />
+   <meta name="keywords" content="Настройка параметров исходящих вызовов" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Parameters for outbound calls</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="tuningvt_inbound.htm">Previous</a>&nbsp;
+     <a href="tuningvt_start.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 12px;"><img src="tuning_outbound.jpg" width="538" height="522" border="0" alt="tuning_outbound"></p>
+<p style="margin: 0px 0px 0px 12px;"><span style="color: #000000;">Tab </span><span style="font-weight: bold; color: #000000;">&lt;Outbound&gt;</span><span style="color: #000000;"> - setting parameters for outgoing calls.</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Pattern (scenario) for outgoing calls&gt;</span>  - the path to the file of scenario for outgoing calls - this script is loaded after a timeout (see below) (usually the script files are stored in a subdirectory \PATTERN);</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-weight: bold;">&lt;Timeout between requests on tasks of outgoing calls &gt;</span> -  time in seconds between requests to get task for autodialing.  Each channel that can handle <a href="tuningvt_system.htm">outbound</a> calls from time to time loads the script (see above), which checks tasks for autodialing  and if the task is exist - executes a call from the scenario). </td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

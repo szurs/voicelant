@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Scenario - multilingual</title>
+   <META name="description" content="Scenario - multilingual" />
+   <meta name="keywords" content="Поддержка многоязычности" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Поддержка многоязычности</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="scen_sourcedata.htm">Previous</a>&nbsp;
+     <a href="scen_timeswitch.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p style="margin: 0px 0px 0px 18px;">Для разных языков командой <a href="cmdinclude.htm"><img src="cmd_include.png" width="83" height="20" border="0" alt="cmd_include"></a> можно подключать различный файлы сценариев, где информация диктуется на выбранном языке. Например:</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="sample_multilang.jpg" width="456" height="673" border="0" alt="sample_multilang"></p>
+<p style="margin: 0px 0px 0px 18px;"><span style="font-size: 8pt; font-family: 'MS Sans Serif';">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 18px;">В данном сценарии при нажатии клавиши "1" телефонного аппарата подключится сценарий из файла "English.pat",&nbsp; при нажатии клавиши "2" - файл "Spanish.pat", при нажатии клавиши "3" - файл "French.pat", а при нажатии клавиши "0" - прозвучит помощь. </p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;">В разных странах правила чтения числовых значений, таких как денежные величины, номера телефонов, дата, время, могут различаться. Для возможности написания скрипта VBScript, который программирует эти правила, в обработчик скрипта (команда <a href="cmdvbscript.htm"><img src="cmd_vbscript.png" width="83" height="20" border="0" alt="cmd_vbscript"></a>) vtarray" (из сценария не видна), значения которой в виде массива можно извлечь из записи <a href="scen_sourcedata.htm">&lt;Record&gt;</a>. Например, в теле скрипта можно написать:</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(0)="c:\Voicelant\serv_mes\ONE.wav"</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(0)="c:\Voicelant\serv_mes\TWO.wav"</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(0)="c:\Voicelant\serv_mes\THREE.wav"</p>
+<p style="margin: 0px 0px 0px 18px;">vtarray(0)="c:\Voicelant\serv_mes\FOUR.wav" </p>
+<p style="margin: 0px 0px 0px 18px;">и затем прочитать запись &lt;Record&gt;, как массив (array) файлов с помощью команды <a href="cmdmessage.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a>.</p>
+
+</td></tr></table>
+
+</body>
+</html>

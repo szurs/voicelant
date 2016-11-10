@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+   <title>Scenario - Sources Data</title>
+   <META name="description" content="Scenario - Sources Data" />
+   <meta name="keywords" content="Типы источников данных" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+</head>
+<body style="margin:0px 0px 0px 0px; background:#FFFFFF;">
+
+
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%; background:#C0C0C0;">
+  <tr style="vertical-align:middle">
+    <td style="text-align:left">
+      <p class="p_Heading1"><span style="font-size: 12pt; font-weight: bold;">Типы источников данных</span></p>
+
+    </td>
+    <td style="text-align:right">
+     <span style="font-size:9pt">
+     <a href="welcometovoicelant.htm">Top</a>&nbsp;
+     <a href="scen_typecommand.htm">Previous</a>&nbsp;
+     <a href="scen_multillanguage.htm">Next</a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table border="0" cellspacing="0" cellpadding="5" style="width:100%"><tr style="vertical-align:top"><td style="text-align:left">
+<p>Для получения информации <a href="scen_typecommand.htm">командами</a> задано конечное число типов стандартных источников данных.</p>
+<p>Для разных команд набор источников данных может меняться.</p>
+<p style="margin: 0px 0px 0px 18px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 18px;"><img src="source_data.jpg" width="432" height="400" border="0" alt="source_data"></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-size: 14pt; font-weight: bold;">&lt;File&gt;</span> - информация содержится в файле, котрый необходимо указатьв строке ввода или выбрать кнопкой. Для разных команд типы файлов могут быть разными, например, для команды <a href="cmdmessage.htm"><img src="cmd_message.png" width="83" height="20" border="0" alt="cmd_message"></a> &lt;Play file&gt; - это файлы с расширениями  WAV или TIF, для команды <a href="cmdcompare.htm"><img src="cmd_compare.png" width="83" height="20" border="0" alt="cmd_compare"></a> - текстовые файлы TXT, а для команды <a href="cmdinclude.htm"><img src="cmd_include.png" width="83" height="20" border="0" alt="cmd_include"></a> - файлы сценариев PAT. </td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-size: 14pt; font-weight: bold;">&lt;Text&gt;</span> - информация представлена непосредственно в виде текста. Если размер текста небольшой, например, номер телефона, то строку можно ввести прямо в поле ввода, если размер текста значительный и в нем присутствуют символы перевода строки, то можно ввести нужный текст в простом редакторе, который вызывается кнопкой, в нем же можно загрузить текст из файла. Очень большие тексты желательно хранить в файлах.</td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-size: 14pt; font-weight: bold;">&lt;Variable&gt;</span> - необходимые данные находятся в переменной, имя которой можно ввести непосредственно в поле ввода или выбрать из предложенного списка:</td></tr></table></div><p style="margin: 0px 0px 0px 12px;"> <img src="list_var.jpg" width="135" height="82" border="0" alt="list_var"> , где переменная &lt;ANI&gt; номер звонящего абонента, &lt;DNIS&gt; - номер назначения, &lt;DTMF&gt; - цифры набранные абонентом тональным способом, &lt;REDIRNUM&gt; - номер, с которого был переадресован вызов (зависит от типа сигнализации), &lt;myvar&gt; - имя ранее заданной переменной. </p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-size: 14pt; font-weight: bold;">&lt;Record&gt;</span> - информация находится в записи, которая может содержать неограниченной число полей. Запись обычно используется для получения информации из программного модуля - плагина, когда неудобно или невозможно передавать данные через переменные, передаваемые в плагин. Например, при выполнении SQL - запроса "select * from table"  к плагину, поддерживающему соединения с базой данных, результаты возвращаются в виде , в котором число полей может быть большим или неизвестным. Доступ к полям записи можно получить по порядковому номеру поля набором нужного числа:<img src="list_record.jpg" width="203" height="29" border="0" alt="list_record"> , или получить всю запись целиком: <img src="list_record_array.jpg" width="199" height="29" border="0" alt="list_record_array"> для сохранения в переменной. Поле с номером 0 используется для получения возвращаемого значения из плагина, например, результат выполнения или код ошибки.</td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;">
+<table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;">
+<tr style="vertical-align:baseline" valign="baseline">
+<td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td>
+<td><span style="font-size: 14pt; font-weight: bold;">&lt;Counter&gt;</span> - текущее значение счетчика цикла - команда <a href="cmdloop.htm"><img src="cmd_loop.png" width="83" height="20" border="0" alt="cmd_loop"></a>.</td></tr></table></div><p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+
+
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-size: 14pt; font-weight: bold;">&lt;Info BOX&gt;</span> - информация о <a href="features_servicebox.htm">контейнере услуги</a>. Конкретный вид данных можно выбрать из предложенного списка:</td></tr></table></div><p style="margin: 0px 0px 0px 12px;"><img src="list_infobox.jpg" width="135" height="130" border="0" alt="list_infobox">, где &lt;Directory&gt; - подкаталог контейнера услуги, &lt;Volume(sec)&gt; - текущая наполненность контейнера услуги в секундах, текущая наполненность контейнера услуги в минутах, &lt;Balanse (sec)&gt; - остаток емкости контейнера услуги в секундах (вычисляется, если задана максимальная емкость контейнера услуги, см. команду <a href="cmdset.htm"><img src="cmd_set.png" width="83" height="20" border="0" alt="cmd_set"></a>), &lt;Balanse (min)&gt; - остаток емкости контейнера услуги в минутах (вычисляется, если задана максимальная емкость контейнера услуги, см. команду <a href="cmdset.htm"><img src="cmd_set.png" width="83" height="20" border="0" alt="cmd_set"></a>), &lt;Number mes&gt; - общее число сообщений в ящике, &lt;Number vox&gt; - количество звуковых сообщений в ящике, &lt;Number fax&gt;  - количество факсимильных сообщений в ящике; </p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-size: 14pt; font-weight: bold;">&lt;Date&gt;</span> - текущая дата. Формат получаемой строки даты можно выбрать из предложенного списка:</td></tr></table></div><p style="margin: 0px 0px 0px 12px;"><img src="list_dateformat.jpg" width="135" height="66" border="0" alt="list_dateformat">, где &lt;DD-MM-YYYY&gt; - дата в этом формате (например, "12-07-2006"); &lt;weekday&gt; - &lt;string week&gt; строка дней недели, где на позиции текущего дня недели - 1, в остальных позициях - 0 (например, "0000100" - пятница); &lt;%d-%m-%Y&gt; - дата форматируется строкой, где %a - %A - полное имя дня недели, %b - сокращенное имя месяца, %B - полное имя месяца, %c - дата и время представлено в соответствующей локализации, %d - день месяца как десятичное число (01 – 31), %H%I - час в 12-часовом формате (01 – 12), %j - день года как десятичное число (001 – 366), %m - месяц как десятичное число (01 – 12), %M - минуты как десятичное число (00 – 59), %p - текущий индикатор A.M./P.M. для 12-часового времени, %S - секунды как десятичное число (00 – 59), %U - неделя года как десятичное число, где Воскресенье как первый день недели (00 – 53), %w - день недели как десятичное число (0 – 6; Воскресенье = 0), %W - неделя года как десятичное число, где Понедельник как первый день недели (00 – 53), %x - дата для текущей локализации, %X - время для текущей локализации, %y -  - год с веком как десятичное число, %z, %Z - имя временной зоны или сокращение, нет символов, если неизвестно.</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 12px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Symbol'; font-style: normal; color: #000000; text-decoration: none;">&#183;</span></td><td><span style="font-size: 14pt; font-weight: bold;">&lt;Time&gt;</span> - текущее время. Формат получаемой строки времени можно выбрать из предложенного списка:</td></tr></table></div><p style="margin: 0px 0px 0px 12px;"><img src="list_timeformat.jpg" width="135" height="34" border="0" alt="list_timeformat">, где &lt;HH:MM:SS&gt; - время в этом формате (например, "14:24:59"),  - время форматирутся строкой см. текущая дата).</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+<p style="margin: 0px 0px 0px 12px;">&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>
